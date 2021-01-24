@@ -56,15 +56,3 @@ def class_estimation(distances, train_data, n):
     max_class = max(classes, key=classes.get)
 
     return max_class
-
-
-def test(train_data, n_test):
-
-    pred_class = []
-    for t_vector in test_vectors:
-
-        pred_class.append(knn(train_data, np.asarray(t_vector), n_test))
-
-    accuracy = accuracy_score(test_classes, pred_class)
-    # print(f"accuracy is: {accuracy}")
-    return accuracy
