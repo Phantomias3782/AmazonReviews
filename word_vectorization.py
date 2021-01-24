@@ -132,11 +132,11 @@ def create_word_vector_dict(review_dict, idf_dict):
 
     for review_index in review_dict.keys():
 
-            word_vector_dict_textual[review_index] = create_word_vector(idf_dict, review_dict[review_index]) # can be depriciated lateron
-            word_vector_dict_array[review_index] = np.array(
-                pd.Series(
-                    create_word_vector(idf_dict, review_dict[review_index])
-                )
+        word_vector_dict_textual[review_index] = create_word_vector(idf_dict, review_dict[review_index]) # can be depriciated lateron
+        word_vector_dict_array[review_index] = np.array(
+            pd.Series(
+                create_word_vector(idf_dict, review_dict[review_index])
             )
+        )
     
     return word_vector_dict_array

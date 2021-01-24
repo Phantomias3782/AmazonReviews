@@ -46,7 +46,7 @@ def clean_data(dataframe, keepColumns):
 
     return dataframe
 
-def balancing(dataframe, balancing = True, graphical = True):
+def balancing(dataframe, balancing = True, graphical = True, max_num = None):
     "Returns information about data balancing and if wished balancd dataset."
 
     # get all classes and init dict
@@ -72,17 +72,36 @@ def balancing(dataframe, balancing = True, graphical = True):
     # balance Dataset
     if balancing:
 
-        data_balanced = dataframe[dataframe["overall"] == least_rated]
-        remain_ratings = [i for i in all_ratings if i != least_rated]
+        if max_num:
+
+            data_balanced = dataframe[dataframe["overall"] == least_rated][:max_num]
+            remain_ratings = [i for i in all_ratings if i != least_rated]
 
 
-        for remain_rating in remain_ratings:
-            
-            # append data
-            data_balanced = data_balanced.append(dataframe[dataframe["overall"] == remain_rating][:rating_count[least_rated]])
+            for remain_rating in remain_ratings:
+                
+                # append data
+                data_balanced = data_balanced.append(dataframe[dataframe["overall"] == remain_rating][:max_num])
 
-        # reset index
-        data_balanced = data_balanced.reset_index(drop = True)
+            # reset index
+            data_balanced = data_balanced.reset_index(drop = True)
 
-        # return
-        return data_balanced
+            # return
+            return data_balanced
+        
+        else:
+
+            data_balanced = dataframe[dataframe["overall"] == least_rated]
+            remain_ratings = [i for i in all_ratings if i != least_rated]
+
+
+            for remain_rating in remain_ratings:
+                
+                # append data
+                data_balanced = data_balanced.append(dataframe[dataframe["overall"] == remain_rating][:rating_count[least_rated]])
+
+            # reset index
+            data_balanced = data_balanced.reset_index(drop = True)
+
+            # return
+            return data_balanced
