@@ -4,8 +4,8 @@ Sentiment Analysis of Amazon Reviews
 
 ## Authors
 
-* **Andreas Bernrieder** - *Object Detection* - [Phantomias3782](https://github.com/Phantomias3782)
-* **Thorsten Hilbradt** - *Contribution* - [Thorsten-H](https://github.com/Thorsten-H)
+* **Andreas Bernrieder** - [Phantomias3782](https://github.com/Phantomias3782)
+* **Thorsten Hilbradt** - [Thorsten-H](https://github.com/Thorsten-H)
 
 ## Getting Started
 
