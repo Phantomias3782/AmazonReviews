@@ -86,6 +86,9 @@ def balancing(dataframe, balancing = True, graphical = True, max_num = None):
             # reset index
             data_balanced = data_balanced.reset_index(drop = True)
 
+            # print dataset length
+            print(f"Dataset now contains {len(data_balanced)} datapoints.")
+
             # return
             return data_balanced
         
@@ -102,6 +105,9 @@ def balancing(dataframe, balancing = True, graphical = True, max_num = None):
 
             # reset index
             data_balanced = data_balanced.reset_index(drop = True)
+
+            # print dataset length
+            print(f"Dataset now contains {len(data_balanced)} datapoints.")
 
             # return
             return data_balanced

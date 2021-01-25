@@ -140,3 +140,16 @@ def create_word_vector_dict(review_dict, idf_dict):
         )
     
     return word_vector_dict_array
+
+def create_input_word_vector(input_str, idf_dict):
+    "create word vector of input string"
+
+    input_tf = create_tf_vector(input_str)
+
+    # create word vector
+
+    word_vec = create_word_vector(idf_dict, input_tf)
+
+    word_vec = [list(word_vec.values())]
+    
+    return word_vec
