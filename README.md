@@ -1,5 +1,5 @@
 # AmazonReviews
-Sentiment Analysis of Amazon Reviews
+Classification of Amazon Reviews
 
 
 ## Authors
