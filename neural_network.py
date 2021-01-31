@@ -79,21 +79,12 @@ def build_model(shape, neuron_layers = 1, neuron_count = [20], activation_functi
     outputs = layers.Dense(10, activation="softmax", name="predictions")(x)
 
     model = keras.Model(inputs=inputs, outputs=outputs)
-
-    # comile model
-    # model.compile(
-    #     optimizer=keras.optimizers.RMSprop(),
-    #     loss=keras.losses.SparseCategoricalCrossentropy(),
-    #     metrics=[keras.metrics.SparseCategoricalAccuracy()]
-    #     )
     
     model.compile(
         optimizer="rmsprop",
         loss="sparse_categorical_crossentropy",
         metrics=["sparse_categorical_accuracy"]
     )
-
-
 
     # return model
     return model
