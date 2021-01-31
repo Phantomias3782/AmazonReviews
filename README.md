@@ -9,7 +9,7 @@ Classification of Amazon Reviews
 
 ## Getting Started
 
-All code can be executed by the AmazonReveiws_SentimentAnalysis.ipybn Jupyter Notebook. 
+All code can be executed by the AmazonReviews.ipybn Jupyter Notebook. 
 
 ### use knn
 When executing first time:
